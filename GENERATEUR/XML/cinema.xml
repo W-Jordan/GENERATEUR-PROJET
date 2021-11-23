@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Rôles" x="78" y="496">
+			<attribut name ="idRole" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomRole" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Utilisateurs" x="490" y="646">
+			<attribut name ="idUtilisateur" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="pseudoUtilisateur" type="Varchar" size1="50" size2="" key="INDEX" isnull="false" comment=""/>
+			<attribut name ="mdpUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="mailUtilisateur" type="Varchar" size1="50" size2="" key="INDEX" isnull="false" comment=""/>
+			<attribut name ="nomUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="prenomUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Films" x="583" y="51">
+			<attribut name ="idFilm" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="codeFilm" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="3d" type="Bool" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Salles" x="87" y="53">
+			<attribut name ="idSalle" type="Varchar" size1="50" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="numSalle" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="capaciteSalle" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Tarifs" x="1063" y="68">
+			<attribut name ="idTarif" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="montantTarif" type="Float" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Réservations" x="1071" y="672">
+			<attribut name ="idReservation" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="dateReservation" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Seances" x="568" y="340">
+			<attribut name ="idSeance" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="departSeance" type="Datetime" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="realise" x="869" y="704">
+
+		</relation>
+
+		<relation name="avoir" x="156" y="701">
+
+		</relation>
+
+		<relation name="heberge" x="152" y="359">
+
+		</relation>
+
+		<relation name="projete" x="651" y="218">
+
+		</relation>
+
+		<entite name="Ligne-Reservations" x="1035" y="340">
+			<attribut name ="idLigneReservation" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="quantiteLigneReservation" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="relation0" x="1142" y="234">
+
+		</relation>
+
+		<relation name="relation1" x="879" y="362">
+
+		</relation>
+
+		<relation name="relation2" x="1152" y="516">
+
+		</relation>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Utilisateurs" elem2="realise" casse="false" x="770.0" y="722.0" />
+		<link name="" card="1,1" elem1="Réservations" elem2="realise" casse="false" x="1037.0" y="652.0" />
+		<link name="" card="0,n" elem1="Rôles" elem2="avoir" casse="false" x="196.0" y="629.0" />
+		<link name="" card="1,1" elem1="Utilisateurs" elem2="avoir" casse="false" x="401.0" y="723.0" />
+		<link name="" card="0,n" elem1="Salles" elem2="heberge" casse="false" x="495.0" y="223.0" />
+		<link name="" card="1,1" elem1="Seances" elem2="heberge" casse="false" x="699.0" y="369.0" />
+		<link name="" card="0,n" elem1="Films" elem2="projete" casse="false" x="817.0" y="158.0" />
+		<link name="" card="1,1" elem1="Seances" elem2="projete" casse="false" x="833.0" y="310.0" />
+		<link name="" card="1,1" elem1="Ligne-Reservations" elem2="relation1" casse="false" x="1007.0" y="366.0" />
+		<link name="" card="0,n" elem1="Seances" elem2="relation1" casse="false" x="797.0" y="354.0" />
+		<link name="" card="1,1" elem1="Ligne-Reservations" elem2="relation0" casse="false" x="1145.0" y="326.0" />
+		<link name="" card="0,n" elem1="Tarifs" elem2="relation0" casse="false" x="1181.0" y="177.0" />
+		<link name="" card="1,1" elem1="Ligne-Reservations" elem2="relation2" casse="false" x="1166.0" y="449.0" />
+		<link name="" card="0,n" elem1="Réservations" elem2="relation2" casse="false" x="1239.0" y="560.0" />
+	</LinkList>
+	<heritageList>
+	</heritageList>
+</MCD>
+</work>

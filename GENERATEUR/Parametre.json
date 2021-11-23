@@ -1,0 +1,7 @@
+{
+    "Host":"localhost",
+    "Port":"8888",
+    "DBName":"generateurbuldo",
+    "Login":"root",
+    "Pwd":"root"
+}

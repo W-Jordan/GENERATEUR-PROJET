@@ -1,0 +1,116 @@
+:root{
+  --couleurFondHTML:#468C98;
+  --couleurFondPage:white;
+  --couleurFondPageBis:#98B9F2;
+  --couleurPolice:#343f4d;
+  --couleurRouge:#c3423d;
+  --couleurVert:#00b894;
+}
+
+html,body,nav,div,main,header,footer,a,nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  color:var(--couleurPolice);
+}
+
+.outilsItem {
+  margin-top: 3em;
+  justify-content: flex-start;
+  border-right: 5px solid var(--couleurFondPage);
+  transition: all 0.2s ease-out;
+  background-color: var(--couleurFondHTML);
+  padding: 1em;
+  align-items: flex-start;
+}
+
+.imgNav,.imgLogo,a{
+  flex:none;
+  width: 10vw;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+}
+
+.logoNav {
+  width: 5em;
+  padding-top:2vh;
+}
+
+.outilsImg {width: 5vw;}
+.outilsItem:hover {border-radius: 2px;}
+.outils {flex-wrap: wrap;}
+header {background-color:var(--couleurFondHTML);}
+img{width: 100%;}
+.rouge{color:var(--couleurRouge);}
+.vert{color:var(--couleurVert);}
+.exterieur {flex: 0.1;}
+.wdth100 {width: 100%;}
+.flexRow {flex-direction: row;}
+.flexWrap {flex-wrap: wrap;}
+.flex02 {flex: 0.2;}
+.flex1 {flex: 1;}
+.flex2 {flex: 2;}
+.flexNone {flex: none;}
+.alignDroite {text-align: right;}
+.alignGauche {text-align: left;}
+a{text-decoration: none;}
+/* a {align-items: center;} */
+a:link {color: var(--couleurPolice);}
+.imgNav:hover{transform: rotate(-10deg);}
+.colonne {flex-direction: column;}
+.ligne {flex-direction: row;}
+.itemGrid{border: 1px solid black;}
+.MYSQLItem {flex-direction: row;}
+#titreMCD{background-color: var(--couleurFondHTML);}
+.pad2{padding: 2vh 2vw;}
+.marg2{margin:2vh 2vw}
+.formMCD{background-color: var(--couleurFondPage);}
+.ajoutEntite,.ajoutRelation{cursor: hand;}
+.bord2{border:solid 2px black;}
+.MCD{border-radius:8px;}
+
+#MCD {
+  background-color: var(--couleurFondHTML);
+  flex: none;
+  height: 70vh;
+  flex-wrap: wrap;
+}
+
+.entite {
+  flex-direction: column;
+  width: 10vw;
+  margin: 2vh 2vw; 
+  cursor: pointer;
+  border-radius:8px;
+  box-shadow:4px 4px 6px black;
+}
+
+aside{
+  background: var(--couleurFondHTML);
+  border-radius: 10px;
+}
+
+#formEntite{
+  border-radius: 10px;
+  box-shadow:4px 4px 6px black;
+  width:80vw;
+  height: 50vh;
+  background-color:var(--couleurFondHTML);
+  position: absolute;
+  top:10vh;
+  left:5vw;
+  display:none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3vw 20vw 12vw 3vw 12vw 3vw 20vw 2vw;
+  text-align:center;
+}
+#formEntite{
+  padding: 1vh 1vw;
+}

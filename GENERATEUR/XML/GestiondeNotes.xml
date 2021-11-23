@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Eleves" x="46" y="24">
+			<attribut name ="idEleve" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="NomEleve" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="PrenomEleve" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Classe" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<entite name="Matieres" x="653" y="36">
+			<attribut name ="idMatiere" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="LibelleMatiere" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+		</entite>
+
+		<relation name="suit" x="390" y="37">
+			<attribut name ="Note" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="Coefficient" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+		</relation>
+
+		<entite name="Utilisateurs" x="318" y="163">
+			<attribut name ="idUtilisateur" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="Login" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="NomUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="PrenomUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="MotdePasse" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="Role" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="idMatiere" type="Int" size1="" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Eleves" elem2="suit" casse="false" x="306.0" y="76.0" />
+		<link name="" card="0,n" elem1="Matieres" elem2="suit" casse="false" x="579.0" y="80.0" />
+	</LinkList>
+	<heritageList>
+	</heritageList>
+</MCD>
+</work>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Entite" x="619" y="411">
+			<attribut name ="idEntite" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomEntite" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Attribut" x="589" y="714">
+			<attribut name ="idAttribut" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomAttribut" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="longueurAttribut" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="nullAttribut" type="Bool" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="LibelleLabelAttribut" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Type" x="1340" y="759">
+			<attribut name ="idType" type="Auto_increment" size1="50" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleType" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Coordonnee" x="17" y="442">
+			<attribut name ="idCoordonnee" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="xCoordonnee" type="Float" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="yCoordonnee" type="Float" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="possede" x="685" y="588">
+
+		</relation>
+
+		<relation name="avoir" x="1026" y="622">
+
+		</relation>
+
+		<relation name="caracterise" x="982" y="759">
+
+		</relation>
+
+		<entite name="Categorie" x="1327" y="542">
+			<attribut name ="idCategorie" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleCategorie" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="positionne" x="99" y="751">
+
+		</relation>
+
+		<relation name="place" x="416" y="464">
+
+		</relation>
+
+		<entite name="Cardinalite" x="594" y="140">
+			<attribut name ="idCardinalite" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleCardinalite" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<relation name="concerner" x="685" y="300">
+
+		</relation>
+
+		<entite name="Relation" x="17" y="23">
+			<attribut name ="idRelation" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleRelation" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="englobe" x="551" y="27">
+
+		</relation>
+
+		<entite name="typeCardinalite" x="1303" y="21">
+			<attribut name ="idTypeCardinalite" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleTypeCardinalite" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="defini" x="1033" y="175">
+
+		</relation>
+
+		<relation name="dispose" x="419" y="246">
+
+		</relation>
+
+		<relation name="trouve" x="102" y="246">
+
+		</relation>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Entite" elem2="possede" casse="false" x="215.0" y="426.0" />
+		<link name="" card="1,1" elem1="Attribut" elem2="possede" casse="false" x="409.0" y="567.0" />
+		<link name="" card="1,1" elem1="Attribut" elem2="caracterise" casse="false" x="608.0" y="697.0" />
+		<link name="" card="0,n" elem1="Type" elem2="caracterise" casse="false" x="809.0" y="776.0" />
+		<link name="" card="1,1" elem1="Attribut" elem2="avoir" casse="false" x="666.0" y="611.0" />
+		<link name="" card="0,n" elem1="Categorie" elem2="avoir" casse="false" x="901.0" y="586.0" />
+		<link name="" card="1,1" elem1="Attribut" elem2="positionne" casse="false" x="608.0" y="524.0" />
+		<link name="" card="0,n" elem1="Coordonnee" elem2="positionne" casse="false" x="832.0" y="369.0" />
+		<link name="" card="1,1" elem1="Entite" elem2="place" casse="false" x="286.0" y="296.0" />
+		<link name="" card="0,n" elem1="Coordonnee" elem2="place" casse="false" x="621.0" y="235.0" />
+		<link name="" card="1,1" elem1="Cardinalite" elem2="concerner" casse="false" x="185.0" y="174.0" />
+		<link name="" card="0,n" elem1="Entite" elem2="concerner" casse="false" x="158.0" y="333.0" />
+		<link name="" card="1,1" elem1="Cardinalite" elem2="englobe" casse="false" x="303.0" y="72.0" />
+		<link name="" card="0,n" elem1="Relation" elem2="englobe" casse="false" x="529.0" y="72.0" />
+		<link name="" card="1,1" elem1="Cardinalite" elem2="defini" casse="false" x="538.0" y="142.0" />
+		<link name="" card="0,n" elem1="typeCardinalite" elem2="defini" casse="false" x="797.0" y="112.0" />
+		<link name="" card="0,n" elem1="Relation" elem2="dispose" casse="false" x="194.0" y="199.0" />
+		<link name="" card="1,1" elem1="Entite" elem2="dispose" casse="false" x="388.0" y="365.0" />
+		<link name="" card="1,1" elem1="Relation" elem2="trouve" casse="false" x="219.0" y="188.0" />
+		<link name="" card="0,n" elem1="Coordonnee" elem2="trouve" casse="false" x="175.0" y="381.0" />
+	</LinkList>
+	<heritageList>
+	</heritageList>
+</MCD>
+</work>

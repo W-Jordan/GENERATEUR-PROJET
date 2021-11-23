@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Role" x="14" y="3">
+			<attribut name ="idRole" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="typeRole" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Candidat" x="204" y="217">
+			<attribut name ="idCandidat" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomCandidat" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="prenomCandidat" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateNaissanceCandidat" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="pseudoCandidat" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="mdpCandidat" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Formation" x="983" y="10">
+			<attribut name ="idFormation" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomFormation" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Experience" x="1256" y="187">
+			<attribut name ="idExperience" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomEntrepriseExperience" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="metierExperience" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="descriptionExperience" type="Varchar" size1="200" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateDebutExperience" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateFinExperience" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Loisir" x="1283" y="407">
+			<attribut name ="idLoisir" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleLoisir" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="possede" x="6" y="230">
+
+		</relation>
+
+		<entite name="Recruteur" x="13" y="427">
+			<attribut name ="idRecruteur" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomRecruteur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="siretRecruteur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="obtenu" x="714" y="78">
+			<attribut name ="dateObtention" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</relation>
+
+		<relation name="possede1" x="138" y="130">
+
+		</relation>
+
+		<entite name="niveauFormation" x="1269" y="10">
+			<attribut name ="idNiveauFormation" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleNiveauFormation" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="correspond" x="1151" y="138">
+
+		</relation>
+
+		<relation name="avoir" x="1048" y="194">
+
+		</relation>
+
+		<relation name="dispose" x="1039" y="270">
+
+		</relation>
+
+		<entite name="Metier" x="1264" y="543">
+			<attribut name ="idMetier" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleMetier" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="exerce" x="1035" y="362">
+
+		</relation>
+
+		<entite name="CV" x="607" y="223">
+			<attribut name ="idCV" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomCV" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="imageCandidat" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="genere" x="518" y="401">
+
+		</relation>
+
+		<entite name="Competence" x="924" y="575">
+			<attribut name ="idCompetence" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleCompetence" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="acquis" x="927" y="425">
+
+		</relation>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Role" elem2="possede" casse="false" x="151.0" y="114.0" />
+		<link name="" card="1,1" elem1="Recruteur" elem2="possede" casse="false" x="112.0" y="214.0" />
+		<link name="" card="0,n" elem1="Role" elem2="possede1" casse="false" x="184.0" y="86.0" />
+		<link name="" card="1,1" elem1="Candidat" elem2="possede1" casse="false" x="365.0" y="135.0" />
+		<link name="" card="0,n" elem1="Formation" elem2="obtenu" casse="false" x="783.0" y="63.0" />
+		<link name="" card="1,1" elem1="Formation" elem2="correspond" casse="false" x="832.0" y="98.0" />
+		<link name="" card="0,n" elem1="niveauFormation" elem2="correspond" casse="false" x="1020.0" y="101.0" />
+		<link name="" card="0,n" elem1="Experience" elem2="avoir" casse="false" x="830.0" y="253.0" />
+		<link name="" card="0,n" elem1="Loisir" elem2="dispose" casse="false" x="846.0" y="442.0" />
+		<link name="" card="0,n" elem1="Metier" elem2="exerce" casse="false" x="403.0" y="111.0" />
+		<link name="" card="0,n" elem1="Candidat" elem2="genere" casse="false" x="354.0" y="241.0" />
+		<link name="" card="1,1" elem1="CV" elem2="genere" casse="false" x="408.0" y="129.0" />
+		<link name="" card="0,n" elem1="CV" elem2="obtenu" casse="false" x="766.0" y="175.0" />
+		<link name="" card="0,n" elem1="CV" elem2="avoir" casse="false" x="910.0" y="270.0" />
+		<link name="" card="0,n" elem1="CV" elem2="dispose" casse="false" x="905.0" y="335.0" />
+		<link name="" card="1,1" elem1="CV" elem2="exerce" casse="false" x="871.0" y="406.0" />
+		<link name="" card="0,n" elem1="CV" elem2="acquis" casse="false" x="807.0" y="378.0" />
+		<link name="" card="0,n" elem1="Competence" elem2="acquis" casse="false" x="977.0" y="570.0" />
+	</LinkList>
+	<heritageList>
+	</heritageList>
+</MCD>
+</work>

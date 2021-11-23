@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Acquisition" x="1" y="7">
+			<attribut name ="idAcquisition" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleAcquisition" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+		<entite name="Gabarit" x="8" y="87">
+			<attribut name ="idGabarit" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleGabarit" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+		<entite name="CmdSemelle" x="335" y="0">
+			<attribut name ="idCmdSemelle" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="referencePatientCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateCmdSemelle" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateRenduPatientCmdSemelle" type="Date" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="dateDepartColisCmdSemelle" type="Date" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="adresseCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="cpCmdSemelle" type="Varchar" size1="5" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="villeCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="paysCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="fichierAcquisitionDroitCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="fichierAcquisitionGaucheCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="fichierAcquisitionCRCmdSemelle" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="collageRecouvrementCmdSemelle" type="Bool" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="amincirAvantSemelleCmdSemelle" type="Bool" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="avantGaucheMedialCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="avantGaucheLateralCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="arriereGaucheMedialCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="arriereGaucheLateralCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="avantDroitMedialCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="avantDroitLateralCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="arriereDroitMedialCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="arriereDroitLateralCmdSemelle" type="Varchar" size1="2" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="elementCorrectionGaucheCmdSemelle" type="Varchar" size1="200" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="elementCorrectionDroiteCmdSemelle" type="Varchar" size1="200" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="observationCmdSemelle" type="Varchar" size1="150" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<relation name="depend" x="208" y="6"></relation>
+		<relation name="lie" x="197" y="69"></relation>
+
+		<entite name="Client" x="624" y="3">
+			<attribut name ="idClient" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomClient" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="prenomClient" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="nomSocieteClient" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="SIRETClient" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="telFixeClient" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="telMobileClient" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="mailClient" type="Varchar" size1="100" size2="" key="INDEX" isnull="false" comment=""/>
+		</entite>
+
+		<relation name="Effectue" x="690" y="216"></relation>
+
+		<entite name="Cabinet" x="826" y="3">
+			<attribut name ="idCabinet" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomCabinet" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="adressePrincipaleCabinet" type="Bool" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="adresseCabinet" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="CPCabinet" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="villeCabinet" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="PaysCabinet" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="observationCabinet" type="Varchar" size1="150" size2="" key="" isnull="true" comment=""/>
+		</entite>
+
+		<relation name="Dispose5" x="843" y="221">
+
+		</relation>
+
+		<entite name="Pointure" x="7" y="171">
+			<attribut name ="idPointure" type="Auto_increment" size1="50" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libellePointure" type="Varchar" size1="5" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="concerne1" x="187" y="127"></relation>
+
+		<entite name="Base" x="731" y="373">
+			<attribut name ="idBase" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleBase" type="Varchar" size1="5" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+		<relation name="concerne2" x="645" y="307"></relation>
+
+		<entite name="RenfortResine" x="0" y="340">
+			<attribut name ="idRenfortResine" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleRenfortResine" type="Varchar" size1="5" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+		<relation name="concerne3" x="183" y="278">
+
+		</relation>
+
+		<relation name="concerne4" x="199" y="362">
+
+		</relation>
+
+		<entite name="Recouvrement" x="15" y="436">
+			<attribut name ="idRecouvrement" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleRecouvrement" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Finition" x="54" y="543">
+			<attribut name ="idFinition" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleFinition" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="concerne5" x="224" y="441">
+
+		</relation>
+
+		<entite name="ElementCorrection" x="1015" y="263">
+			<attribut name ="idElementCorrection" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleElementCorrection" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="LocalisationPied" x="1101" y="542">
+			<attribut name ="idLocalisationPied" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleLocalisationPied" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="Localiser" x="1205" y="379"></relation>
+
+		<entite name="Materiaux" x="972" y="347">
+			<attribut name ="idMateriaux" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleMateriaux" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="descriptionMateriaux" type="Varchar" size1="100" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="dimensionMateriaux" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="thermosoudageMateriaux" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="tempsMateriaux" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="dureteShoreMateriaux" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="DensiteMateriaux" type="Varchar" size1="10" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="typeMateriaux" type="Varchar" size1="20" size2="" key="" isnull="true" comment=""/>
+		</entite>
+
+		<entite name="Epaisseur" x="997" y="179">
+			<attribut name ="idEpaisseur" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleEpaisseur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="CombinaisonAppareillage" x="764" y="296">
+
+		</relation>
+
+		<entite name="TypeSemelle" x="890" y="551">
+			<attribut name ="idTypeSemelle" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleTypeSemelle" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="defini1" x="709" y="499">
+
+		</relation>
+
+		<entite name="Role" x="1158" y="179">
+			<attribut name ="idRole" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleRole" type="Varchar" size1="150" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Utilisateur" x="1045" y="79">
+			<attribut name ="idUtilisateur" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="pseudoUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="mdpUtilisateur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="defini" x="1223" y="10">
+
+		</relation>
+
+		<entite name="Bloc" x="10" y="258">
+			<attribut name ="idBloc" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleBloc" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="concerne6" x="175" y="209">
+
+		</relation>
+
+		<relation name="correspond" x="810" y="480">
+
+		</relation>
+
+		<entite name="Livraison" x="208" y="558">
+			<attribut name ="idLivraison" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleLivraison" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="correspond1" x="264" y="489">
+
+		</relation>
+
+		<entite name="Modele" x="506" y="558">
+			<attribut name ="idModele" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleModele" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="defini3" x="488" y="482">
+
+		</relation>
+
+		<entite name="Format" x="361" y="557">
+			<attribut name ="idFormat" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleFormat" type="Varchar" size1="150" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+		<relation name="defini5" x="397" y="484"></relation>
+
+		<entite name="CuvetteTalonniere" x="658" y="556">
+			<attribut name ="idCuvetteTalonniere" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="libelleCuvetteTalonniere" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+		</entite>
+
+		<relation name="defini6" x="598" y="488"></relation>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Acquisition" elem2="depend" casse="false" x="977.0" y="93.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="depend" casse="false" x="772.0" y="57.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="lie" casse="false" x="744.0" y="166.0" />
+		<link name="" card="0,n" elem1="Gabarit" elem2="lie" casse="false" x="902.0" y="299.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="Effectue" casse="false" x="680.0" y="207.0" />
+		<link name="" card="0,n" elem1="Client" elem2="Effectue" casse="false" x="787.0" y="417.0" />
+		<link name="" card="0,n" elem1="Client" elem2="Dispose5" casse="false" x="1060.0" y="111.0" />
+		<link name="" card="1,1" elem1="Cabinet" elem2="Dispose5" casse="false" x="1060.0" y="236.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="concerne1" casse="false" x="513.0" y="245.0" />
+		<link name="" card="0,n" elem1="Pointure" elem2="concerne1" casse="false" x="254.0" y="343.0" />
+		<link name="" card="0,n" elem1="Base" elem2="concerne2" casse="false" x="262.0" y="422.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="concerne2" casse="false" x="517.0" y="272.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="concerne3" casse="false" x="589.0" y="282.0" />
+		<link name="" card="0,n" elem1="RenfortResine" elem2="concerne3" casse="false" x="478.0" y="468.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="concerne4" casse="false" x="668.0" y="288.0" />
+		<link name="" card="0,n" elem1="Recouvrement" elem2="concerne4" casse="false" x="705.0" y="474.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="concerne5" casse="false" x="705.0" y="275.0" />
+		<link name="" card="0,n" elem1="Finition" elem2="concerne5" casse="false" x="771.0" y="455.0" />
+		<link name="" card="1,1" elem1="ElementCorrection" elem2="Localiser" casse="false" x="852.0" y="620.0" />
+		<link name="" card="0,n" elem1="LocalisationPied" elem2="Localiser" casse="false" x="1027.0" y="664.0" />
+		<link name="" card="0,n" elem1="CmdSemelle" elem2="CombinaisonAppareillage" casse="false" x="794.0" y="175.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="defini1" casse="false" x="855.0" y="246.0" />
+		<link name="" card="0,n" elem1="TypeSemelle" elem2="defini1" casse="false" x="897.0" y="351.0" />
+		<link name="" card="1,1" elem1="Utilisateur" elem2="defini" casse="false" x="1763.0" y="451.0" />
+		<link name="" card="0,n" elem1="Role" elem2="defini" casse="false" x="1765.0" y="532.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="concerne6" casse="false" x="532.0" y="265.0" />
+		<link name="" card="0,n" elem1="Bloc" elem2="concerne6" casse="false" x="245.0" y="342.0" />
+		<link name="" card="1,1" elem1="Base" elem2="correspond" casse="false" x="1427.0" y="368.0" />
+		<link name="" card="0,n" elem1="TypeSemelle" elem2="correspond" casse="false" x="1559.0" y="449.0" />
+		<link name="" card="1,1" elem1="CmdSemelle" elem2="correspond1" casse="false" x="700.0" y="346.0" />
+		<link name="" card="0,n" elem1="Livraison" elem2="correspond1" casse="false" x="666.0" y="498.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="defini3" casse="false" x="877.0" y="399.0" />
+		<link name="" card="0,n" elem1="Modele" elem2="defini3" casse="false" x="1152.0" y="448.0" />
+		<link name="" card="0,n" elem1="TypeSemelle" elem2="CombinaisonAppareillage" casse="false" x="1254.0" y="560.0" />
+		<link name="" card="0,n" elem1="Epaisseur" elem2="CombinaisonAppareillage" casse="false" x="753.0" y="722.0" />
+		<link name="" card="0,n" elem1="Materiaux" elem2="CombinaisonAppareillage" casse="false" x="1005.0" y="723.0" />
+		<link name="" card="0,n" elem1="ElementCorrection" elem2="CombinaisonAppareillage" casse="false" x="1166.0" y="676.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="defini5" casse="false" x="877.0" y="424.0" />
+		<link name="" card="0,n" elem1="Format" elem2="defini5" casse="false" x="1113.0" y="550.0" />
+		<link name="" card="0,1" elem1="CmdSemelle" elem2="defini6" casse="false" x="689.0" y="546.0" />
+		<link name="" card="0,n" elem1="CuvetteTalonniere" elem2="defini6" casse="false" x="698.0" y="742.0" />
+		<link name="" card="0,n" elem1="Client" elem2="CombinaisonAppareillage" casse="false" x="786.0" y="193.0" />
+	</LinkList>
+	<heritageList>
+	</heritageList>
+</MCD>
+</work>

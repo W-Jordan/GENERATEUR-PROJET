@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Roles" x="58" y="21">
+			<attribut name ="idRole" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="typeRole" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="joueurs" x="37" y="262">
+			<attribut name ="IdJoueur" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="prenomJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateNaissanceJoueur" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="sexeJoueur" type="Char" size1="1" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="adresseJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="codePostalJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="villeJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="pseudoJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="mdpJoueur" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="attribue" x="110" y="145">
+
+		</relation>
+
+		<entite name="clubs" x="745" y="581">
+			<attribut name ="idClub" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomClub" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="dateCreationClub" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="tarifAdherentClub" type="Float" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="tarifNonAdherentClub" type="Float" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="terrains" x="732" y="189">
+			<attribut name ="idTerrain" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="nomTerrain" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="emplacementTerrain" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="adhere" x="364" y="617">
+			<attribut name ="dateAdhesion" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</relation>
+
+		<relation name="reservation" x="393" y="251">
+			<attribut name ="dateReservation" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="heureDebutReservation" type="Time" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="heureFinReservation" type="Time" size1="" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="tarifReservation" type="Float" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</relation>
+
+		<relation name="possede" x="818" y="395">
+
+		</relation>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Roles" elem2="attribue" casse="false" x="180.0" y="109.0" />
+		<link name="" card="0,n" elem1="joueurs" elem2="adhere" casse="false" x="296.0" y="634.0" />
+		<link name="" card="0,n" elem1="clubs" elem2="adhere" casse="false" x="526.0" y="667.0" />
+		<link name="" card="0,n" elem1="joueurs" elem2="reservation" casse="false" x="310.0" y="560.0" />
+		<link name="" card="0,n" elem1="terrains" elem2="reservation" casse="false" x="551.0" y="392.0" />
+		<link name="" card="1,1" elem1="terrains" elem2="possede" casse="false" x="840.0" y="322.0" />
+		<link name="" card="0,n" elem1="clubs" elem2="possede" casse="false" x="891.0" y="527.0" />
+		<link name="" card="1,1" elem1="joueurs" elem2="attribue" casse="false" x="163.0" y="279.0" />
+	</LinkList>
+	<heritageList>
+	</heritageList>
+</MCD>
+</work>
